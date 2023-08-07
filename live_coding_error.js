@@ -7,3 +7,11 @@ var exceptionTypes = {
 function getWeatherFromServerError() {
   throw NotImplemented_50001;
 }
+
+/*
+ abnormal 문제까지 해결하셨나요?
+ 그럼 해당코드에서 getWeatherFromServerAbnormal 함수 대신 
+ getWeatherFromServerError를 호출해주세요.
+ 그리고 발생하는 오류를 자기 스타일대로 제어 해주세요.
+ 그리고 그렇게 제어한 이유를 글로 작성해주세요.
+*/
