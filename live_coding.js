@@ -65,7 +65,7 @@ function showLiveNormal(){
 
 
 
-function checkResult1(line1, line2){
+function checkResultNormal(line1, line2){
     const test1 = `지난 일주일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 31, 30입니다.`;
     const test2 = "그리고 최고 강수 확률은 각각 30, 60, 45입니다.";
 
