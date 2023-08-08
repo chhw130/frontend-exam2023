@@ -1,5 +1,5 @@
 /*
-    다음 코드에서 humidity property를 에디터에서 모두 삭제하세요.
+    다음 코드에서rty를 에디터에서 모두 삭제하세요.
     json 배열의 순서는 변경하지 마세요.
 */
 const getWeatherFromServer = () => {
@@ -7,37 +7,37 @@ const getWeatherFromServer = () => {
         {
           "city": "테헤란",
           "weather": [
-            {"temperature": 32.2, "humidity": 85, "rainProbability": 30},
-            {"temperature": 31.5, "humidity": 82, "rainProbability": 40},
-            {"temperature": 30.8, "humidity": 80, "rainProbability": 50},
-            {"temperature": 29.6, "humidity": 78, "rainProbability": 45},
-            {"temperature": 29.1, "humidity": 77, "rainProbability": 55},
-            {"temperature": 31.7, "humidity": 79, "rainProbability": 60},
-            {"temperature": 30.9, "humidity": 82, "rainProbability": 50}
+            {"temperature": 32.2,  "rainProbability": 30},
+            {"temperature": 31.5,  "rainProbability": 40},
+            {"temperature": 30.8,  "rainProbability": 50},
+            {"temperature": 29.6,  "rainProbability": 45},
+            {"temperature": 29.1,  "rainProbability": 55},
+            {"temperature": 31.7,  "rainProbability": 60},
+            {"temperature": 30.9,  "rainProbability": 50}
           ]
         },        
         {
           "city": "서울",
           "weather": [
-            {"temperature": 28.3, "humidity": 75, "rainProbability": 10},
-            {"temperature": 29.1, "humidity": 78, "rainProbability": 10},
-            {"temperature": 26.7, "humidity": 80, "rainProbability": 10},
-            {"temperature": 30.5, "humidity": 72, "rainProbability": 10},
-            {"temperature": 31.8, "humidity": 68, "rainProbability": 10},
-            {"temperature": 29.4, "humidity": 70, "rainProbability": 10},
-            {"temperature": 28.9, "humidity": 74, "rainProbability": 30}
+            {"temperature": 28.3,  "rainProbability": 10},
+            {"temperature": 29.1,  "rainProbability": 10},
+            {"temperature": 26.7,  "rainProbability": 10},
+            {"temperature": 30.5,  "rainProbability": 10},
+            {"temperature": 31.8,  "rainProbability": 10},
+            {"temperature": 29.4,  "rainProbability": 10},
+            {"temperature": 28.9,  "rainProbability": 30}
           ]
         },
         {
           "city": "파리",
           "weather": [
-            {"temperature": 30.1, "humidity": 75, "rainProbability": 45},
-            {"temperature": 29.7, "humidity": 76, "rainProbability": 35},
-            {"temperature": 30.5, "humidity": 78, "rainProbability": 35},
-            {"temperature": 30.2, "humidity": 79, "rainProbability": 25},
-            {"temperature": 29.8, "humidity": 80, "rainProbability": 25},
-            {"temperature": 30.9, "humidity": 77, "rainProbability": 15},
-            {"temperature": 31.5, "humidity": 76, "rainProbability": 15}
+            {"temperature": 30.1,  "rainProbability": 45},
+            {"temperature": 29.7,  "rainProbability": 35},
+            {"temperature": 30.5,  "rainProbability": 35},
+            {"temperature": 30.2,  "rainProbability": 25},
+            {"temperature": 29.8,  "rainProbability": 25},
+            {"temperature": 30.9,  "rainProbability": 15},
+            {"temperature": 31.5,  "rainProbability": 15}
           ]
         }
       ];
