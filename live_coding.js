@@ -1,6 +1,6 @@
 /*
     다음 코드에서 humidity property를 에디터에서 모두 삭제하세요.
-     
+    json 배열의 순서는 변경하지 마세요.
 */
 function getWeatherFromServer() {
     return [
