@@ -56,16 +56,14 @@ const getWeatherFromServer = () => {
     4. 함수를 추가하고 코드를 세분화하세요.
 */
 
-const showLiveNormal = () => {
+const showGeneral = () => {
   var line1 = undefined; // 지난 일주일간 ...
   var line2 = undefined; // 그리고 최고 강수 확률은 ...
 
-  checkResultNormal(line1, line2);
+  checkResultGeneral(line1, line2);
 }
 
-
-
-const checkResultNormal = (line1, line2) => {
+const checkResultGeneral = (line1, line2) => {
     const test1 = `지난 일주일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 31, 30입니다.`;
     const test2 = "그리고 최고 강수 확률은 각각 30, 60, 45입니다.";
 

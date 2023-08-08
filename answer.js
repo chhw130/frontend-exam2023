@@ -1,4 +1,4 @@
 const ready = () => {
-    showLiveNormal();
-    showLiveAbnormal();
+    showGeneral();
+    showAbnormal();
 };

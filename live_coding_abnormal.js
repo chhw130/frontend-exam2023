@@ -57,7 +57,7 @@ const getWeatherFromServerAbnormal = () => {
     5. 함수를 추가하고 코드를 세분화하세요.
 */
 
-const showLiveAbnormal = () => {
+const showAbnormal = () => {
 
   var line1 = undefined; // 지난 육일간 ...
   var line2 = undefined; // 그리고 최고 강수 확률은 ...
