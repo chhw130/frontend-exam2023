@@ -1,46 +1,46 @@
 /*
-    다음 코드에서rty를 에디터에서 모두 삭제하세요.
+    다음 코드에서humidity property를 에디터에서 모두 삭제하세요.
     json 배열의 순서는 변경하지 마세요.
 */
 const getWeatherFromServer = () => {
-    return [
-        {
-          "city": "테헤란",
-          "weather": [
-            {"temperature": 32.2,  "rainProbability": 30},
-            {"temperature": 31.5,  "rainProbability": 40},
-            {"temperature": 30.8,  "rainProbability": 50},
-            {"temperature": 29.6,  "rainProbability": 45},
-            {"temperature": 29.1,  "rainProbability": 55},
-            {"temperature": 31.7,  "rainProbability": 60},
-            {"temperature": 30.9,  "rainProbability": 50}
-          ]
-        },        
-        {
-          "city": "서울",
-          "weather": [
-            {"temperature": 28.3,  "rainProbability": 10},
-            {"temperature": 29.1,  "rainProbability": 10},
-            {"temperature": 26.7,  "rainProbability": 10},
-            {"temperature": 30.5,  "rainProbability": 10},
-            {"temperature": 31.8,  "rainProbability": 10},
-            {"temperature": 29.4,  "rainProbability": 10},
-            {"temperature": 28.9,  "rainProbability": 30}
-          ]
-        },
-        {
-          "city": "파리",
-          "weather": [
-            {"temperature": 30.1,  "rainProbability": 45},
-            {"temperature": 29.7,  "rainProbability": 35},
-            {"temperature": 30.5,  "rainProbability": 35},
-            {"temperature": 30.2,  "rainProbability": 25},
-            {"temperature": 29.8,  "rainProbability": 25},
-            {"temperature": 30.9,  "rainProbability": 15},
-            {"temperature": 31.5,  "rainProbability": 15}
-          ]
-        }
-      ];
+  return [
+    {
+      city: "테헤란",
+      weather: [
+        { temperature: 32.2, rainProbability: 30 },
+        { temperature: 31.5, rainProbability: 40 },
+        { temperature: 30.8, rainProbability: 50 },
+        { temperature: 29.6, rainProbability: 45 },
+        { temperature: 29.1, rainProbability: 55 },
+        { temperature: 31.7, rainProbability: 60 },
+        { temperature: 30.9, rainProbability: 50 },
+      ],
+    },
+    {
+      city: "서울",
+      weather: [
+        { temperature: 28.3, rainProbability: 10 },
+        { temperature: 29.1, rainProbability: 10 },
+        { temperature: 26.7, rainProbability: 10 },
+        { temperature: 30.5, rainProbability: 10 },
+        { temperature: 31.8, rainProbability: 10 },
+        { temperature: 29.4, rainProbability: 10 },
+        { temperature: 28.9, rainProbability: 30 },
+      ],
+    },
+    {
+      city: "파리",
+      weather: [
+        { temperature: 30.1, rainProbability: 45 },
+        { temperature: 29.7, rainProbability: 35 },
+        { temperature: 30.5, rainProbability: 35 },
+        { temperature: 30.2, rainProbability: 25 },
+        { temperature: 29.8, rainProbability: 25 },
+        { temperature: 30.9, rainProbability: 15 },
+        { temperature: 31.5, rainProbability: 15 },
+      ],
+    },
+  ];
 };
 
 /*
@@ -57,18 +57,32 @@ const getWeatherFromServer = () => {
 */
 
 const showGeneral = () => {
+  const day = 7;
   var line1 = undefined; // 지난 일주일간 ...
   var line2 = undefined; // 그리고 최고 강수 확률은 ...
+  const weatherDatas = getWeatherFromServer();
+  const tempObject = {};
+  const rainProbabilityObject = {};
+
+  weatherDatas.forEach((datas) => {
+    const weatherArr = datas.weather.slice(0, day);
+    const city = datas.city;
+
+    avgTemp(weatherArr, city, tempObject);
+    maxRainProbability(weatherArr, city, rainProbabilityObject);
+  });
+
+  var { line1, line2 } = setString(day, tempObject, rainProbabilityObject);
 
   checkResultGeneral(line1, line2);
-}
+};
 
 const checkResultGeneral = (line1, line2) => {
-    const test1 = `지난 일주일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 31, 30입니다.`;
-    const test2 = "그리고 최고 강수 확률은 각각 30, 60, 45입니다.";
+  const test1 = `지난 일주일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 31, 30입니다.`;
+  const test2 = "그리고 최고 강수 확률은 각각 30, 60, 45입니다.";
 
-    if (line1 == test1 && line2 == test2)
-        console.log("pass");
-    else
-        console.log("fail");
+  console.log(line1, line2);
+
+  if (line1 == test1 && line2 == test2) console.log("pass");
+  else console.log("fail");
 };
