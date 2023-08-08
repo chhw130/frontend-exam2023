@@ -2,7 +2,7 @@
     다음 코드에서 humidity property를 에디터에서 모두 삭제하세요.
     json 배열의 순서는 변경하지 마세요.
 */
-function getWeatherFromServer() {
+const getWeatherFromServer = () => {
     return [
         {
           "city": "테헤란",
@@ -41,7 +41,7 @@ function getWeatherFromServer() {
           ]
         }
       ];
-}
+};
 
 /*
     1. 일주일치의 평균 온도를 구하세요. 단위는 섭씨, 정수로 표현
@@ -56,7 +56,7 @@ function getWeatherFromServer() {
     4. 함수를 추가하고 코드를 세분화하세요.
 */
 
-function showLiveNormal(){
+const showLiveNormal = () => {
   var line1 = undefined; // 지난 일주일간 ...
   var line2 = undefined; // 그리고 최고 강수 확률은 ...
 
@@ -65,7 +65,7 @@ function showLiveNormal(){
 
 
 
-function checkResultNormal(line1, line2){
+const checkResultNormal = (line1, line2) => {
     const test1 = `지난 일주일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 31, 30입니다.`;
     const test2 = "그리고 최고 강수 확률은 각각 30, 60, 45입니다.";
 
@@ -73,4 +73,4 @@ function checkResultNormal(line1, line2){
         console.log("pass");
     else
         console.log("fail");
-}
+};

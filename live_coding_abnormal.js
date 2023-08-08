@@ -2,7 +2,7 @@
     다음 코드에서 humidity property를 에디터에서 모두 삭제하세요.
     json 배열의 순서는 변경하지 마세요.
 */
-function getWeatherFromServerAbnormal() {
+const getWeatherFromServerAbnormal = () => {
   return [
       {
           "city": "테헤란",
@@ -57,7 +57,7 @@ function getWeatherFromServerAbnormal() {
     5. 함수를 추가하고 코드를 세분화하세요.
 */
 
-function showLiveAbnormal(){
+const showLiveAbnormal = () => {
 
   var line1 = undefined; // 지난 육일간 ...
   var line2 = undefined; // 그리고 최고 강수 확률은 ...
@@ -65,7 +65,7 @@ function showLiveAbnormal(){
   checkResultAbnormal(line1, line2);
 }
 
-function checkResultAbnormal(line1, line2){
+const checkResultAbnormal = (line1, line2) => {
   const test1 = `지난 육일간 "서울", "테헤란", "파리"의 평균 온도는 각각 29, 32, 30입니다.`;
   const test2 = "그리고 최고 강수 확률은 각각 30, 60, 50입니다.";
 

@@ -1,4 +1,4 @@
-function ready(){
+const ready = () => {
     showLiveNormal();
     showLiveAbnormal();
 };
